@@ -1,0 +1,3 @@
+[webserver]
+18.226.226.146 ansible_user=ansiuser
+3.147.53.187 ansible_user=ansiuser
