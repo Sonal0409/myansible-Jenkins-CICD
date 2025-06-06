@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: install tomcat package
-    package: name=tomcat state=present
+    yum: name=tomcat state=present
     when: ansible_os_family == "RedHat"
   - name: install apache2 package
     package: name=apache2 state=present
