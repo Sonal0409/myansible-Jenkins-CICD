@@ -2,13 +2,11 @@
   hosts: webserver
   become: true
   tasks:
-  - name: install httpd package
-    package: name=httpd state=present
+  - name: install tomcat package
+    package: name=tomcat state=present
     when: ansible_os_family == "RedHat"
   - name: install apache2 package
     package: name=apache2 state=present
     when: ansible_os_family == "Debian"
     ignore_errors: true
-  - name: showdown all Redhat servers
-    command: /sbin/shutdown -t now
-    when: ansible_os_family != "Debian"
+
